@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <title>To-Do List</title>
+</head>
+<body>
+  
+    <a href="/">Today</a><a href="/wish">Work</a>
+    
+    
+
+    <div class="heading">
+        <% if(locals.fulldate){ %>
+
+            <h2><%= fulldate%></h2>
+
+        <% } else{ %>
+
+            <h2>Work</h2>
+
+        <% } %>
+        
+    
+    </div>

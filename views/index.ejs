@@ -1,0 +1,24 @@
+<%-include("partials/header.ejs")%>
+
+<div class="all" >
+  <% if(locals.todo)  { %>
+    <% todo.forEach((item)=>{ %>
+        <div class="content">
+            <input class="input" type="checkbox">
+            <p class="para"><%= item %></p>
+        </div>
+        <% }) %>
+         
+    
+    
+<% } %>
+    <form action="/submitTodo" method="post">
+        <div class="content">
+            <input type="text" name="newListItem" placeholder="New Item" autocomplete="off" required>
+            <button type="submit"><img width="100" height="100" src="https://img.icons8.com/plasticine/100/add--v1.png" alt="add--v1"/></button>
+        </div>
+    </form>
+   
+</div>
+
+<%-include("partials/footer.ejs")%>
