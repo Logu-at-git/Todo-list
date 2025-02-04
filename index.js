@@ -1,5 +1,7 @@
 import bodyParser from "body-parser";
 import express from "express";
+import helmet from "helmet";
+import compression from "compression";
 
 const app=express();
 const port=process.env.PORT || 3000;
@@ -10,6 +12,8 @@ const month=new Date().getMonth();
 const year=new Date().getFullYear();
 const fulldate=date+"-"+month+"-"+year;
 
+app.use(helmet());
+app.use(compression());
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended:true}));
 
