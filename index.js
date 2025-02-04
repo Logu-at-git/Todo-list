@@ -2,7 +2,7 @@ import bodyParser from "body-parser";
 import express from "express";
 
 const app=express();
-const port=3000;
+// const port=3000;
 const todo_list=[];
 const wish_list=[];
 const date=new Date().getDate();
@@ -15,11 +15,11 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 
 
-app.listen(port,()=>{
+// app.listen(port,()=>{
     
-    console.log(`Listening to port ${port}!`);
+//     console.log(`Listening to port ${port}!`);
     
-})
+// })
 
 app.post("/submitTodo",(req,res)=>{
     const newItem=req.body["newListItem"];
